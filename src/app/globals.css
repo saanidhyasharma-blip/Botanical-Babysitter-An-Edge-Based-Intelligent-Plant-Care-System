@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    /* Organic Luxury Theme (Light default) */
+    --background: 60 15% 97%; /* #f9f9f6 */
+    --foreground: 147 28% 14%; /* #1a2f24 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 147 28% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 147 28% 14%;
+
+    --primary: 136 18% 35%; /* #4a6b53 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 100 9% 91%; /* #e8ebe6 */
+    --secondary-foreground: 147 28% 14%;
+
+    --muted: 100 9% 91%;
+    --muted-foreground: 147 10% 45%;
+
+    --accent: 38 60% 85%; /* warm beige */
+    --accent-foreground: 147 28% 14%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 90% 55%;
+    --warning-foreground: 147 28% 14%;
+
+    --border: 100 9% 85%;
+    --input: 100 9% 85%;
+    --ring: 136 18% 35%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Fraunces', serif;
+  }
+}
