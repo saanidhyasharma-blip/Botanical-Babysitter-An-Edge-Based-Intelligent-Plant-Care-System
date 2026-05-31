@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Botanical Babysitter 🌿
 
-## Getting Started
+An Edge-Based Intelligent Plant Care System using ESP32 and IoT automation.
 
-First, run the development server:
+---
 
+## Features
+- Real-time temperature and humidity monitoring
+- Soil moisture detection
+- Automated irrigation system
+- Web-based monitoring dashboard (Next.js)
+- Manual & automatic control modes
+- Edge-based processing
+- Smart RGB status indication
+
+---
+
+## Hardware Components
+- ESP32
+- DHT11 Sensor
+- Soil Moisture Sensor
+- Soil pH Sensor
+- LDR Sensor
+- Relay Module
+- Water Pump
+
+---
+
+## System Architecture
+*(Add architecture image here - e.g., `![Architecture Diagram](docs/Architecture_Diagram.png)`)*
+
+---
+
+## Working Principle
+1. Sensors collect environmental data
+2. ESP32 processes data locally
+3. Decision logic activates actuators
+4. Web dashboard displays real-time data
+
+---
+
+## Installation & Setup
+
+### 1. Clone Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/saanidhyasharma-blip/Botanical-Babysitter-An-Edge-Based-Intelligent-Plant-Care-System.git
+cd Botanical-Babysitter-An-Edge-Based-Intelligent-Plant-Care-System
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Firmware Setup (Hardware)
+1. Open Arduino IDE.
+2. Install required libraries: `WiFi.h`, `WebServer.h`, `DHT.h`.
+3. Open `firmware/esp32_botanical/esp32_botanical.ino`.
+4. Update the WiFi credentials in the code:
+   ```cpp
+   const char* ssid = "YOUR_WIFI_NAME";
+   const char* password = "YOUR_WIFI_PASSWORD";
+   ```
+5. Upload the firmware to your ESP32.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Web Dashboard Setup (Software)
+The beautiful "Organic Luxury" dashboard is built with Next.js and Tailwind CSS.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run the development server
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the dashboard in your browser. (Default local login: `admin` / `admin`).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Future Enhancements
+- Cloud analytics (Supabase integration)
+- Weather-aware automation
+- Solar-powered operation
+- Multi-plant greenhouse support
+- Mobile notifications
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributors
+- Saanidhya Sharma (and Team)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
